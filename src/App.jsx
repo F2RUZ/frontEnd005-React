@@ -1,29 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, CardBody } from "react-bootstrap";
+import ProductList from "./components/ProductList";
+
 const App = () => {
-  const [post, setPost] = useState([]);
+  const [product, setproduct] = useState([]);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts`)
+    const api = `https://dummyjson.com/products`;
+    fetch(api)
       .then((res) => res.json())
-      .then((data) => setPost(data));
+      .then((data) => setproduct(data.products));
   }, []);
 
-  console.log(post);
-
   return (
-    <div className="d-flex flex-wrap  container">
-      {post.map((item) => (
-        <Card className="bg-dark text-white w-25 p-5">
-          <h1>{item.title}</h1>
-          <p>{item.id}</p>
-
-          <CardBody>
-            <Button className="btn-danger">Delete</Button>
-            <Button>Edit</Button>
-          </CardBody>
-        </Card>
-      ))}
+    <div>
+      <ProductList product={product} />
     </div>
   );
 };
