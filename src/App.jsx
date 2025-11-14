@@ -1,9 +1,10 @@
 import Form from "./components/Form";
+import Login from "./components/Login";
 
 const App = () => {
   return (
     <div>
-      <Form />
+      <Login />
     </div>
   );
 };
