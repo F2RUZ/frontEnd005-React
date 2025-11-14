@@ -1,9 +1,9 @@
-import MoviesList from "./components/MoviesList";
+import Form from "./components/Form";
 
 const App = () => {
   return (
     <div>
-      <MoviesList />
+      <Form />
     </div>
   );
 };
