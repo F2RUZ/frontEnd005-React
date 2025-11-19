@@ -177,28 +177,28 @@
 
 // export default App;
 
-// // import React from "react";
-// // import UncontrolledForm from "./components/UncontrolledForm";
-
-// // const App = () => {
-// //   return (
-// //     <div>
-// //       <UncontrolledForm />
-// //     </div>
-// //   );
-// // };
-
-// // export default App;
-
 import React from "react";
-import Game from "./components/Game";
+import UncontrolledForm from "./components/UncontrolledForm";
 
 const App = () => {
   return (
     <div>
-      <Game />
+      <UncontrolledForm />
     </div>
   );
 };
 
 export default App;
+
+// import React from "react";
+// import Game from "./components/Game";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Game />
+//     </div>
+//   );
+// };
+
+// export default App;
